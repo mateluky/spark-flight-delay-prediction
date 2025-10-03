@@ -79,6 +79,25 @@ To avoid data leakage, variables available **only after landing** were excluded,
 - **Severe Delay Accuracy** → Accuracy for delays > 60 minutes  
 
 
+## 🏆 Results
+
+Two models were trained and evaluated on the airline delay dataset:
+
+| Model              | RMSE   | MAE   | R²    | 15-min Accuracy | Severe Delay Accuracy |
+|--------------------|--------|-------|-------|-----------------|-----------------------|
+| Linear Regression  | 14.66  | 8.04  | 0.592 | –               | –                     |
+| Decision Tree      | 14.29  | 8.53  | 0.612 | 0.861           | 0.801                 |
+
+**Best Performing Model:**  
+The **Decision Tree** achieved the best overall performance:  
+- **RMSE:** 14.29  
+- **MAE:** 8.53  
+- **R²:** 0.612  
+- **15-min Accuracy:** 86.1% of predictions were within 15 minutes of the actual delay  
+- **Severe Delay Accuracy:** 80.1% accuracy on delays over 60 minutes  
+
+These results highlight the model’s ability to capture complex relationships in the data, particularly for identifying significant delays.
+
 
 ## 🚀 Running the Application
 Ensure Apache Spark is installed and execute:  
